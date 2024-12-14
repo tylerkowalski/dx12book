@@ -85,6 +85,14 @@ int main()
     cout << "projW + perpW == w  = " << equal << endl;
     cout << "projW + perpW != w  = " << notEqual << endl;
     cout << "angle               = " << angleDegrees << endl;
+    cout << endl;
+
+    cout << "TYLER CODE:" << endl;
+    XMVECTOR vecA = XMVectorSet(1.0, 1.0, 0.0, 0.0);
+    XMVECTOR vecB = XMVectorSet(0.0, 1.0, 0.0, 0.0);
+    XMVECTOR myAngle = XMVector3AngleBetweenVectors(vecA, vecB);
+    float myAngleDegrees = XMConvertToDegrees(XMVectorGetX(myAngle));
+    cout << "TYLER's angle is: " << myAngleDegrees << endl;
 
     return 0;
 }
